@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Eventos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=chevron_right" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Eventos</title>
+
+</head>
+
+    
+      <header>
+    <div class="logo"><img src="cortada.png" alt=""></div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="logo"></div>
+    </div>
+    <nav>
+        <!--codigo do menu para desktop-->
+        <ul class="desktop">
+    
+           <li class="hideOnMobile"> <a href="index.html" > Home</a></li>
+           <li class="hideOnMobile"> <a href="noticias.html" class="active" >Notícias</a>
+            <li class="hideOnMobile"> <a href="#" >Sobre</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li><a href="Eventos.html">Eventos</a></li>
+                        <li><a href="historia.html">História</a></li>
+                        <li><a href="instalac.html">Instalações</a></li>
+                        <li><a href="professores.html">Professores</a></li>
+                      
+                    </ul>
+                </div>
+            </li>
+                        <li class="hideOnMobile"><a href="anuncios.html"> Comunicados</a></li>
+                            <li class="hideOnMobile"><a href="secretaria.html">Secretaria Online</a></li>
+                                <li class="hideOnMobile"><a href="aluno.html">Aluno</a></li>
+                                    <li class="hideOnMobile"><a href="cursos.html">Cursos</a></li>
+                                        
+                                    </ul>
+                                    <ul class="hide">
+                                    <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                                        
+                                    </ul>
+    </nav>
+    
+    <!--codigo da sidebar mobile-->
+    
+    <ul class="sidebar">
+        <li onclick= hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="noticias.html">Notícias</a></li>
+
+        <li><button onclick="toggleDropdown()"><a href="#/, ">Sobre ▼</a></button>
+            <div class="dropdown">
+            <div class="sub-menu" id="dropdownMenu">
+                <ul>
+                    <li><a href="Eventos.html">Eventos</a></li>
+                    <li><a href="historia.html">História</a></li>
+                    <li><a href="instalac.html">Instalações</a></li>
+                    <li><a href="professores.html">Professores</a></li>
+                                  </ul>
+            </div>
+        </div>
+        <li><a href="anuncios.html"> Comunicados</a></li></li>
+        <li><a href="secretaria.html">Secretaria Online</a></li>
+        <li><a href="aluno.html">Aluno</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+       </ul>    
+</header>
+        
+        <!--codigo em script do botão do menu da sidebar-->
+        
+        <script>function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display= 'flex'
+        const imagem =document.querySelector('.sidebar')
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display= 'none'
+        }
+        //codigo em script do sobre e o seu dropdown
+        
+        function toggleDropdown() {
+                    const dropdown = document.getElementById('dropdownMenu');
+                    const isVisible = dropdown.style.display === 'block';
+                    dropdown.style.display = isVisible ? 'none' : 'block';
+                }
+        
+                // Opcional: Fecha o dropdown se o usuário clicar fora dele
+                window.addEventListener('click', function(event) {
+                    const dropdown = document.getElementById('dropdownMenu');
+                    const button = event.target.closest('button');
+                    if (!button && !dropdown.contains(event.target)) {
+                        dropdown.style.display = 'none';
+                    }
+                });
+        </script>
+        <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - IMPTEL</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+        }
+
+        .eventos{
+            margin: auto;
+            margin-top: 30px;
+            text-align: center;
+            color: white;
+            width: 100%;
+            font-size: 25px;
+            width: 1200px;
+            padding-top: 30px;
+            padding-bottom: 40px;
+            background: #071f7e;
+            border-radius: 0;
+        }
+
+        .eventos h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .eventos p {
+            font-size: 1.1em;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .eventos-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 1rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #071f7e;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #666;
+        }
+
+        .eventos-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .event-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            cursor: pointer;
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .event-card.destaque {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            transform: scale(1.02);
+        }
+
+        .event-card.destaque:hover {
+            transform: scale(1.02) translateY(-10px);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .event-card.destaque .card-image {
+            height: 250px;
+        }
+
+        .card-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1));
+            z-index: 1;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .event-card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-date {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255,255,255,0.95);
+            color: #333;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+            z-index: 2;
+        }
+
+        .event-card.destaque .card-date {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .card-content {
+            padding: 2rem;
+        }
+
+        .event-card.destaque .card-content {
+            padding: 2.5rem;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #333;
+            line-height: 1.3;
+        }
+
+        .event-card.destaque .card-title {
+            color: white;
+            font-size: 1.6rem;
+        }
+
+        .card-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .event-card.destaque .card-description {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .card-info {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .event-card.destaque .info-item {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .card-button {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .card-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .event-card.destaque .card-button {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .event-card.destaque .card-button:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .event-status {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .status-aberto {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-breve {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-encerrado {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .event-card.destaque .event-status {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        @media (min-width: 768px) {
+            .eventos-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .event-card.destaque {
+                grid-column: 1 / -1;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+
+            .event-card.destaque .card-image {
+                height: 100%;
+                min-height: 300px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .eventos-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .event-card.destaque {
+                grid-column: 1 / 3;
+            }
+        }
+
+        .load-more {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .load-more-btn {
+            background: #071f7e;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .load-more-btn:hover {
+            background: #0a2999;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(7, 31, 126, 0.3);
+        }
+
+        .hidden-events {
+            display: none;
+        }
+
+        .hidden-events.show {
+            display: contents;
+        }
+
+        .filter-section {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: white;
+            color: #071f7e;
+            border: 2px solid #071f7e;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #071f7e;
+            color: white;
+        }
+
+        /* Responsive para eventos */
+        @media (max-width: 768px) {
+            .eventos {
+                width: 100%;
+                margin-top: 20px;
+                padding: 20px 10px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .eventos-section {
+                padding: 20px 1rem;
+            }
+
+            .filter-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .filter-btn {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .eventos h1 {
+                font-size: 2rem;
+            }
+
+            .eventos p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .card-content {
+                padding: 1.5rem;
+            }
+
+            .event-card.destaque .card-content {
+                padding: 2rem;
+            }
+        }
+
+        /* Animações */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .event-card {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+       
+    </style>
+</head>
+<body>
+    
+    <section class="eventos-section">
+        <div class="section-header">
+            <h2 class="section-title">Todos os Eventos</h2>
+            <p class="section-subtitle">Explore nossa programação completa de eventos acadêmicos e extracurriculares</p>
+        </div>
+
+        
+
+        <div class="eventos-grid" id="eventosGrid">
+            <!-- Card em Destaque -->
+            <div class="event-card destaque" data-categoria="academicos" data-status="abertos">
+                <div class="card-image">
+                    <img src="defesa.jpg" alt="Defesa Final PAP" loading="lazy">
+                    <div class="card-date">10-12 JUN</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Defesa Final (PAP)</h3>
+                    <p class="card-description">Os finalistas do Instituto Médio Privado de Tecnologias (IMPTEL) irão apresentar os seus Trabalhos de Conclusão de Curso, em uma série de sessões públicas que marcam a etapa final da sua formação.</p>
+                    <div class="card-info">
+                        <div class="info-item">📍 Auditório</div>
+                        <div class="info-item">👥 Apenas Alunos</div>
+                        <div class="info-item">🎓 Acadêmico</div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Cards Normais -->
+            <div class="event-card" data-categoria="academicos" data-status="abertos">
+                <div class="card-image">
+                    <img src="feiraemr.jpg" alt="Feira de Empreendedorismo" loading="lazy">
+                    <div class="card-date">28-30 MAIO</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Feira de Empreendedorismo</h3>
+                    <p class="card-description">Explore ideias inovadoras, conecte-se com mentes criativas e descubra soluções que transformarão o futuro.</p>
+                    <div class="card-info">
+                        <div class="info-item">📍 Pátio Central</div>
+                        <div class="info-item">👥 Apenas Alunos</div>
+                        <div class="info-item">💼 Empreendedorismo</div>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <div class="event-card" data-categoria="academicos" data-status="encerrado">
+                <div class="card-image">
+                    <img src="concurso programação.jpg" alt="Concurso de Programação" loading="lazy">
+                    <div class="card-date">28 JUN</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Vitória na Programação!</h3>
+                    <p class="card-description">Alunos do IMPTEL participaram e venceram concurso de programação realizado no Instituto de Telecomunicações (ITEL).</p>
+                    <div class="card-info">
+                        <div class="info-item">📍 ITEL</div>
+                        <div class="info-item">🏆 1º Lugar</div>
+                        <div class="info-item">💻 Programação</div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="event-card" data-categoria="esportivos" data-status="breve">
+                <div class="card-image">
+                    <img src="campeonato.webp" alt="Campeonato de Futsal" loading="lazy">
+                    <div class="card-date">20-30 SET</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Campeonato de Futsal Interclasse 2026</h3>
+                    <p class="card-description">Prepare sua turma e venha mostrar quem manda dentro de campo! Competição entre todas as turmas do IMPTEL.</p>
+                    <div class="card-info">
+                        <div class="info-item">📍 Quadra</div>
+                        <div class="info-item">👥 12 times</div>
+                        <div class="info-item">⚽ Futsal</div>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <div class="event-card" data-categoria="academicos" data-status="abertos">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=400&h=300&fit=crop" alt="Workshop de IA" loading="lazy">
+                    <div class="card-date">15 JUL</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Palestra Sobre inteligência artificial</h3>
+                    <p class="card-description">Explore o futuro da tecnologia com nosso workshop especializado em IA. Aprenda sobre machine learning e redes neurais.</p>
+                    <div class="card-info">
+                        <div class="info-item">📍 Lab de Informática</div>
+                        <div class="info-item">👥 Apenas ALunos</div>
+                        <div class="info-item">🤖 Tecnologia</div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="event-card" data-categoria="academicos" data-status="breve">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop" alt="Feira de Ciências" loading="lazy">
+                    <div class="card-date">05 AGO</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Feira de Tecnologia</h3>
+                    <p class="card-description">Apresentação dos projetos científicos desenvolvidos pelos estudantes do IMPTEL. Inovação em ação!</p>
+                    <div class="card-info">
+                        <div class="info-item">📍 Pátio Central</div>
+                        <div class="info-item">👥 Apenas Alunos</div>
+                        <div class="info-item">🔬 Tecnologia</div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="load-more">
+            <button class="load-more-btn" onclick="carregarMaisEventos()">
+                Carregar Mais Eventos
+            </button>
+        </div>
+    </section>
+
+    <script>
+        function filtrarEventos(categoria) {
+            const cards = document.querySelectorAll('.event-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            // Atualizar botões ativos
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Filtrar cards
+            cards.forEach(card => {
+                if (categoria === 'todos') {
+                    card.style.display = 'block';
+                } else if (categoria === 'abertos' || categoria === 'breve') {
+                    if (card.dataset.status === categoria) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                } else {
+                    if (card.dataset.categoria === categoria) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        function inscreverEvento(nomeEvento) {
+            const confirmacao = confirm(`Deseja se inscrever no evento: ${nomeEvento}?`);
+            
+            if (confirmacao) {
+                alert(`Inscrição realizada com sucesso para: ${nomeEvento}!\n\nVocê receberá mais informações por email.`);
+                console.log('Evento inscrito:', nomeEvento);
+            }
+        }
+
+        function interesseEvento(nomeEvento) {
+            const confirmacao = confirm(`Deseja demonstrar interesse no evento: ${nomeEvento}?\n\nVocê será notificado quando as inscrições abrirem.`);
+            
+            if (confirmacao) {
+                alert(`Interesse registrado para: ${nomeEvento}!\n\nVocê será notificado quando as inscrições abrirem.`);
+                console.log('Interesse registrado:', nomeEvento);
+            }
+        }
+
+        function verDetalhes(nomeEvento) {
+            alert(`Detalhes do evento: ${nomeEvento}\n\nEste evento já foi concluído. Confira os resultados e fotos em nossa galeria.`);
+        }
+
+        function carregarMaisEventos() {
+            alert('Funcionalidade em desenvolvimento.\n\nEm breve teremos mais eventos disponíveis!');
+        }
+
+        // Animação de entrada para os cards quando a página carrega
+        window.addEventListener('load', function() {
+            const cards = document.querySelectorAll('.event-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 150);
+            });
+        });
+
+        // Scroll suave para seções
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+    </script>
+</body>
+</html>
+<footer>
+    <div class="footer-col">
+        <h4>INSTALAÇÕES</h4>
+        <ul>
+            <h5>IMPTEL I - Camama | IMPTEL II - Vila de Viana</h5>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>INFORMAÇÕES</h4>
+        <ul>
+        
+            <h5>-Escola Secundária</h5>
+            <h5>943 529 061</h5>
+            <h5>imptel.angola@gmail.com</h5>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>HORÁRIO</h4>
+        <ul>
+        
+            <h5>Segunda á Sexta  
+                07:00 - 16:00</h5>
+                
+    
+            
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>REDES SOCIAIS</h4>
+        <div class="links">
+            <div class="facebook"><a href="https://www.facebook.com/profile.php?id=100057469868635"><i class= "fab fa-facebook-f"></i></a></div>
+           <div class="whatsapp"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwa.me%2F244923393211%3Ffbclid%3DIwAR0PukjoJDxBj_6HHEWYXVgXiZQRuTPDNDyxwgroBjfSdJke4a9HlwQjf-c_aem_AcufdJuepDcjxvZH1ZkyA9Z0p7YrENCTgkqxVBvz7uaWWwW6aSSckX5f4026J-htp_zSO7l71Wi6x8WhqxSYqqSa&h=AT111-OHNBzDa7Is0uz5xrg6wLa3xbsSTYfpoGh9yBpZugmATfGeUWh8i60xjx8U1VMvA5zkoSEVWjB0iQ2oxwLUJXVfjGx7_TmZS9xVZMeTphA1YTyOQf_fJwWaZ8_ZyNqn"><i class= "fab fa-whatsapp "></i></a></div>
+        </div>
+       
+    </div>
+
+</footer>
+</html>
